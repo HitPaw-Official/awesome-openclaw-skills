@@ -1,6 +1,6 @@
 # Awesome OpenClaw Skills
 
-📚 A curated collection of top OpenClaw skills from [ClawHub](https://clawhub.ai). Explore skills with categories, download stats, and quick install commands.
+📚 A curated collection of **hundreds** of top OpenClaw skills from [ClawHub](https://clawhub.ai). This catalog is regularly updated with new skills.
 
 [![Last Updated](https://img.shields.io/badge/updated-March 2026-blue)](https://github.com/HitPaw-Official/awesome-openclaw-skills)
 
@@ -19,6 +19,128 @@ Example:
 ```bash
 clawhub install self-improving-agent
 ```
+## 🚀 Quick Start
+
+### Prerequisites
+
+- OpenClaw agent running (latest version)
+- Internet connection for downloading skills
+
+### 1. Install ClawHub CLI (if not already)
+
+```bash
+npm install -g @openclaw/clawhub
+```
+
+Verify installation:
+
+```bash
+clawhub --version
+```
+
+### 2. Search for Skills
+
+```bash
+# Search by keyword
+clawhub search weather
+
+# List top downloaded skills
+clawhub explore --sort downloads --limit 20
+
+# List newest skills
+clawhub explore --sort newest
+```
+
+### 3. Install a Skill
+
+```bash
+# Install by slug (found in this catalog)
+clawhub install self-improving-agent
+
+# Or with specific version
+clawhub install weather@1.2.0
+```
+
+### 4. Update Skills
+
+```bash
+# Update all installed skills
+clawhub update all
+
+# Update a specific skill
+clawhub update self-improving-agent
+```
+
+### 5. Uninstall a Skill
+
+```bash
+clawhub uninstall weather
+```
+
+### 6. List Installed Skills
+
+```bash
+clawhub list installed
+```
+
+---
+
+## 📦 What Each Skill Provides
+
+Skills are self-contained packages that add new capabilities to your OpenClaw agent. Each skill typically includes:
+
+- **Script/CLI** that executes when you invoke the skill
+- **Dependencies** (Node.js packages, Python modules, external tools)
+- **Documentation** on when and how to use it
+- **Configuration** (API keys, settings)
+
+When installed, the skill's commands become available to your agent automatically.
+
+---
+
+## ⚙️ Configuration
+
+Some skills require API keys or external service credentials. Common setup:
+
+```bash
+# Set environment variables (in your agent config)
+export OPENAI_API_KEY=sk-...
+export WEATHER_API_KEY=...
+
+# Or use a .env file (if skill supports it)
+```
+
+Check individual skill documentation for specific requirements.
+
+---
+
+## 🐛 Troubleshooting
+
+| Issue | Solution |
+|-------|----------|
+| `clawhub: command not found` | Ensure npm global bin is in PATH: `export PATH="$PATH:~/.npm-global/bin"` |
+| Skill not activating after install | Restart your OpenClaw agent |
+| Permission denied | Use `sudo npm install -g` or fix npm global directory permissions |
+| Dependency errors | Some skills require system packages (e.g., `ffmpeg`, `imagemagick`). Check skill docs. |
+| API errors | Verify required API keys are set and have sufficient quota |
+
+---
+
+## 🔄 Keep Updated
+
+This catalog is updated regularly. To refresh your local view:
+
+```bash
+clawhub explore --refresh-cache
+```
+
+Check back often for new skills!
+
+---
+
+## 🤝 Contributing
+
+Found a great skill on [ClawHub](https://clawhub.ai) that's not listed? [Open an issue](https://github.com/HitPaw-Official/awesome-openclaw-skills/issues) or submit a PR!
 
 ## 🔍 Browse Skills by Category
 
